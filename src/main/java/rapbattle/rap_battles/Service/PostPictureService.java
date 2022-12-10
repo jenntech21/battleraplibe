@@ -1,0 +1,13 @@
+package rapbattles.rap_battles.Service;
+
+import rapbattles.rap_battles.Models.DTO.UserDTO;
+import rapbattles.rap_battles.Util.Exceptions.MainException;
+
+import java.io.IOException;
+
+public interface PostPictureService {
+
+    int uploadPostImage(String fileStr, UserDTO userDTO) throws IOException, MainException;
+
+    byte[] downloadImage(String imageName)throws IOException;
+}
